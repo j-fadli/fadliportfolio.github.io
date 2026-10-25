@@ -242,7 +242,7 @@
       osmanthus: [['tile-single', 'Osmanthus IEM on botanical tiles'], ['card-osmanthus', 'Hand-drawn osmanthus illustration card'], ['tile-pair', 'Pair of Osmanthus IEMs on botanical tiles'], ['studio-coiled', 'Osmanthus IEMs with coiled cable on white'], ['tile-nozzle', 'Osmanthus IEM nozzle detail on tiles'], ['studio-pair', 'Osmanthus IEM pair in the studio'], ['tile-cable', 'Osmanthus cable and plug on tiles']],
       lily: [['tile-single', 'Lily of the Valley IEM on botanical tiles'], ['card-lily', 'Hand-drawn lily of the valley illustration card'], ['tile-pair', 'Pair of Lily of the Valley IEMs on tiles'], ['studio-coiled', 'Lily of the Valley IEMs with coiled cable on white'], ['tile-single-cable', 'Lily of the Valley IEM with cable on tiles'], ['studio-pair', 'Lily of the Valley IEM pair in the studio'], ['tile-cable', 'Lily of the Valley cable and plug on tiles']]
     };
-    function file(set, k) { return k.indexOf('card-') === 0 ? 'assets/img/bk-' + k + '.webp' : 'assets/img/bk-' + set + '-' + k + '.webp'; }
+    function file(set, k) { return k.indexOf('card-') === 0 ? 'img/bk-' + k + '.webp' : 'img/bk-' + set + '-' + k + '.webp'; }
     function show(set) {
       bk.dataset.flower = set;
       bk.style.setProperty('--flower', 'var(--' + set + ')'); bk.style.setProperty('--flower-soft', 'var(--' + set + '-soft)');
@@ -292,14 +292,14 @@
       btns.forEach(function (el, i) { var on = el.dataset.p === p; el.classList.toggle('on', on); lns[i].classList.toggle('on', on); });
       if (p === current && poster.getAttribute('src').indexOf(p) > -1) { cap.textContent = names.join(' · '); return; }
       current = p; poster.classList.add('fade');
-      setTimeout(function () { poster.src = 'assets/img/sn-' + p + '.webp'; poster.alt = 'StereoNet poster for ' + names.join(', '); cap.textContent = names.join(' · '); poster.onload = function () { poster.classList.remove('fade'); }; setTimeout(function () { poster.classList.remove('fade'); }, 400); }, reduce ? 0 : 220);
+      setTimeout(function () { poster.src = 'img/sn-' + p + '.webp'; poster.alt = 'StereoNet poster for ' + names.join(', '); cap.textContent = names.join(' · '); poster.onload = function () { poster.classList.remove('fade'); }; setTimeout(function () { poster.classList.remove('fade'); }, 400); }, reduce ? 0 : 220);
     }
     var order = []; brands.forEach(function (b) { if (order.indexOf(b[1]) < 0) order.push(b[1]); });
     function stop() { if (auto) { clearInterval(auto); auto = null; } }
     function start() { if (reduce || touched || auto) return; auto = setInterval(function () { var i = (order.indexOf(current) + 1) % order.length; var p = order[i]; pick(p, ''); }, 3200); }
     if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { if (es[0].isIntersecting) start(); else stop(); }, { threshold: .35 }).observe(map);
     window.addEventListener('resize', place); place(); pick('zmf', 'ZMF');
-    order.forEach(function (p) { var i = new Image(); i.src = 'assets/img/sn-' + p + '.webp'; });
+    order.forEach(function (p) { var i = new Image(); i.src = 'img/sn-' + p + '.webp'; });
   })();
 
   /* ---------------- reviews constellation ---------------- */
