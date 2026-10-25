@@ -372,7 +372,7 @@
     }
     btn.addEventListener('click', function () {
       linked = !linked; cons.classList.toggle('linked', linked); btn.setAttribute('aria-pressed', String(linked));
-      btn.textContent = linked ? 'Scatter them again' : 'Connect the dots: see the pattern';
+      btn.textContent = linked ? 'Scatter them again' : 'Connect the Dots: See the Pattern';
       $('#consNote').textContent = linked ? 'What they kept saying: product knowledge \u00D7' + counts.know + ', patience \u00D7' + counts.patient + ', no pressure \u00D7' + counts.nopush + ', listening \u00D7' + counts.needs + '.' : '';
       place();
     });
