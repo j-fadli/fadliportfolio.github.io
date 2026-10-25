@@ -15,7 +15,7 @@
       ['Highest-reviewed staff member', 'customer relationships', 'trust'],
       ['Beginner-friendly', 'making things simple', 'empathy'],
       ['Luxury product launch', 'visual storytelling', 'collaboration'],
-      ['21 brands, one booth', 'creative direction', 'cohesion'],
+      ['21 brands, one voice', 'creative direction', 'cohesion'],
       ['Workshop launch campaign', 'event storytelling', 'connection'],
       ['Instagram & photography', 'content creation', 'consistency'],
       ['Psychology at SUSS', 'seeing different perspectives', 'curiosity']
@@ -239,8 +239,8 @@
   (function () {
     var bk = $('#bk'), strip = $('#bkStrip'); if (!bk) return;
     var sets = {
-      osmanthus: [['tile-single', 'Osmanthus IEM on botanical tiles'], ['card-osmanthus', 'Hand-drawn osmanthus illustration card'], ['tile-pair', 'Pair of Osmanthus IEMs on botanical tiles'], ['studio-coiled', 'Osmanthus IEMs with coiled cable on white'], ['tile-nozzle', 'Osmanthus IEM nozzle detail on tiles'], ['studio-pair', 'Osmanthus IEM pair in the studio'], ['tile-cable', 'Osmanthus cable and plug on tiles']],
-      lily: [['tile-single', 'Lily of the Valley IEM on botanical tiles'], ['card-lily', 'Hand-drawn lily of the valley illustration card'], ['tile-pair', 'Pair of Lily of the Valley IEMs on tiles'], ['studio-coiled', 'Lily of the Valley IEMs with coiled cable on white'], ['tile-single-cable', 'Lily of the Valley IEM with cable on tiles'], ['studio-pair', 'Lily of the Valley IEM pair in the studio'], ['tile-cable', 'Lily of the Valley cable and plug on tiles']]
+      osmanthus: [['tile-single', 'Osmanthus IEM on botanical tiles'], ['card-osmanthus', 'Hand-drawn Osmanthus illustration card'], ['tile-pair', 'Pair of Osmanthus IEMs on botanical tiles'], ['studio-coiled', 'Osmanthus IEMs with coiled cable on white'], ['tile-nozzle', 'Osmanthus IEM nozzle detail on tiles'], ['studio-pair', 'Osmanthus IEM pair in the studio'], ['tile-cable', 'Osmanthus cable and plug on tiles']],
+      lily: [['tile-single', 'Lily of the Valley IEM on botanical tiles'], ['card-lily', 'Hand-drawn Lily of the Valley illustration card'], ['tile-pair', 'Pair of Lily of the Valley IEMs on tiles'], ['studio-coiled', 'Lily of the Valley IEMs with coiled cable on white'], ['tile-single-cable', 'Lily of the Valley IEM with cable on tiles'], ['studio-pair', 'Lily of the Valley IEM pair in the studio'], ['tile-cable', 'Lily of the Valley cable and plug on tiles']]
     };
     function file(set, k) { return k.indexOf('card-') === 0 ? 'img/bk-' + k + '.webp' : 'img/bk-' + set + '-' + k + '.webp'; }
     function show(set) {
